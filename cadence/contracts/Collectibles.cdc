@@ -16,7 +16,16 @@ pub contract Collectibles: NonFungibleToken{
         }
     }
 
+  // Collection Resource
+pub resource Collection {
+        pub var ownedNFTs: @{UInt64: NonFungibleToken.NFT}
+        init(){
+            self.ownedNFTs <- {}
+        }
+}
+
+
   init(){
   	self.totalSUpply = 0
   }
-}
+   } 
